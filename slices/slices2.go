@@ -44,4 +44,14 @@ func main() {
 	fmt.Println("b[:2] == []byte{'g', 'o'} ")
 	fmt.Println("b[2:] == []byte{'l', 'a', 'n', 'g'}")
 	fmt.Println("b[:] == b")
+	/*A slice is a descriptor of an array segment. It consists of a pointer to the array,
+	the length of the segment, and its capacity (the maximum length of the segment).
+	Slicing does not copy the slice's data. It creates a new slice value that points to the original array.
+	A slice cannot be grown beyond its capacity.
+	To append one slice to another, use ... to expand the second argument to a list of arguments.*/
+	x := []string{"John", "Paul"}
+	y := []string{"George", "Ringo", "Pete"}
+	x = append(x, y...) // equivalent to "append(a, b[0], b[1], b[2])"
+	fmt.Println("Append...:", x)
+
 }
