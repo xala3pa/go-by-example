@@ -53,5 +53,4 @@ func main() {
 	y := []string{"George", "Ringo", "Pete"}
 	x = append(x, y...) // equivalent to "append(a, b[0], b[1], b[2])"
 	fmt.Println("Append...:", x)
-
 }
