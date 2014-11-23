@@ -12,4 +12,7 @@ func main() {
 	a, b := multi_values()
 	fmt.Println(a)
 	fmt.Println(b)
+
+	_, c := multi_values()
+	fmt.Println(c)
 }
