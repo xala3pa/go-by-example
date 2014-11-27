@@ -7,10 +7,12 @@ type rect struct {
 }
 
 func (r *rect) area() int {
+	r.width = 2
 	return r.width * r.height
 }
 
 func (r rect) perim() int {
+	r.width = 10
 	return 2*r.width + 2*r.height
 }
 
