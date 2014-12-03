@@ -28,5 +28,8 @@ func main() {
 
 	// Block until we receive a notification from the
 	// worker on the channel.
-	<-done
+	s := <-done
+	if s {
+		fmt.Println("we have waited to finish!!")
+	}
 }
