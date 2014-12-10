@@ -13,6 +13,11 @@ func main() {
 
 	limiter := time.Tick(time.Millisecond * 500)
 
+	/*
+	 * By blocking on a receive from the limiter channel
+	 * before serving each request, we limit ourselves
+	 * to 1 request every 200 milliseconds.
+	 */
 	for req := range requests {
 		<-limiter
 		fmt.Println("request", req, time.Now())
